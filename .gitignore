@@ -1,0 +1,6 @@
+data/
+eigenvec_output/
+infall_output/
+eigenvec_lg.py
+get_eigenvec.py
+infall.py
