@@ -5,7 +5,7 @@ This repository contains a **Jupyter notebook** analyzing the accretion historie
 
 **Dupuy et al., 2022 – _“Anisotropic satellite accretion onto the Local Group with HESTIA”_** ([arXiv:2208.14648](https://arxiv.org/abs/2208.14648))
 
-![Satellite Accretion Visualization](accretion_vis.png)
+![Satellite Accretion Visualization](accretion.png)
 
 ---
 
