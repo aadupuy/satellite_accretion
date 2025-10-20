@@ -88,4 +88,32 @@ pip install numpy pandas matplotlib astropy
 jupyter notebook satellite-accretion.ipynb
 ```
 
-> **Note:** You will need your own data.
+---
+
+## Data Preprocessing & Tensor Eigenvector Extraction
+
+### Satellite Infall Catalogs
+
+Satellite infall catalogs were generated with the Python script `extract_satellite_infall.py`, which:
+- Identifies host halos (MW/M31) and their satellites
+- Detects satellite infall at a specified multiple of the host virial radius
+- Outputs satellite positions, velocities, and masses at infall and at z=0
+
+> **Note:** Original simulation outputs and infall datasets are proprietary and not included.
+
+### Tensor Eigenvector Extraction
+
+Tensor eigenvectors (shear and tidal) were extracted from HESTIA simulation grids using two scripts:
+
+1. **`extract_tensor_eigenvectors.py`**  
+   - Extracts eigenvectors **at satellite infall positions only**  
+   - Focuses on MW/M31 host halos  
+   - Output shape: `(N_sat, 13)`  
+
+2. **`extract_tensor_eigenvectors_birth.py`**  
+   - Extracts eigenvectors at **both infall and birth positions**  
+   - Handles **multiple rvir selections** (0.5–2.0 × rvir)  
+   - Processes all satellites in the infall catalog  
+   - Output shape: `(N_sat, 19)`  
+
+> **Note:** Original tensor grid files are proprietary and not included.
